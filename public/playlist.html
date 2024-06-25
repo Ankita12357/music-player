@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/e74fb72b70.js" crossorigin="anonymous"></script>
+    <title>Playlist</title>
+<style>
+    /* 
+a{
+    color:rgb(15, 16, 15);
+    padding: 0px;
+}
+    .list img{
+        height:13vh;
+        width:18vh;
+        justify-content: left;
+        box-shadow: 0 5px 10px rgba(204, 4, 4, 0.22);
+        
+    }
+    
+    .song{
+        padding: 10px 0px;
+        color: rgb(16, 16, 16);
+        margin:1px 0px;
+    }
+    .name{
+        padding: 10px;
+
+    }
+    h2{
+        padding-bottom: 20px;
+        color: rgb(10, 10, 10);
+    }
+    .logo img {
+    height: 30px;
+    width: 30px;
+    margin-right: 5px;
+    color:aquamarine;
+    }
+
+    .music-symbol {
+    font-size: 24px;
+    color:aquamarine;
+    }
+    main {
+    position: relative;
+    padding: 50px 20px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+main article {
+    width: calc(100% / 3 - 5px);
+    border-radius: 3px;
+    overflow: hidden;
+    margin-bottom: 25px;
+    background: #f1f3f4;
+}
+
+main article img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+main article p,
+main article h4,
+main article audio {
+    padding: 0 5px;
+}
+
+main article audio {
+    width: 100%;
+}
+ .container{
+    display: flex;
+   
+ }
+ .list{
+         margin:10px 13px;
+         padding-bottom: 125px; 
+         width: 60%;
+         border:2px solid black;
+         border-radius: 13px;
+        background-color: rgb(224, 214, 233);
+        margin-left: 432px;
+    }
+    .list1{
+        display: flex;
+    }
+ .sidebar{
+    margin:10px 3px;
+    width:20%;
+    background-color: rgb(224, 214, 233);
+    border:2px solid black;
+    border-radius: 13px;
+    box-shadow: 0 5px 10px rgba(204, 4, 4, 0.22); 
+    position: fixed;
+    margin-left: 91px;
+    height: 77vh;
+}
+ 
+
+.sidebar-header {
+    padding: 20px 0;
+}
+
+.sidebar-header h2 {
+    margin: 0;
+    font-size: 1.5em;
+    color: aquamarine; 
+}
+
+.sidebar-menu {
+    padding-top: 45px;
+    width: 82%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.menu-item {
+    width: 85%;
+    padding: 15px 15px;
+    text-decoration: none;
+    color: #0b0b0b;
+    font-size: 1.2em;
+    transition: background-color 0.3s ease;
+    text-align: center;
+}
+
+.menu-item:hover {
+    background-color: aquamarine;
+} */
+* {
+    padding: 0px 10px;
+    margin: 1px 10px;
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: rgb(4, 4, 41);
+    color: #2d2c2c;
+}
+header.hd {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0px;
+    background-color: rgb(50, 50, 66);
+    box-shadow: 0 2px 4px rgba(229, 233, 234, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000; /* Ensure it stays on top */
+}
+header .left-section {
+    display: flex;
+    align-items: center;
+}
+header .left-section .search-form {
+    display: flex;
+    align-items: center;
+    margin-right: 0px;
+    color: transparent;
+}
+header .left-section .search-form input {
+    padding: 5px 10px;
+    font-size: 16px;
+    border: 1px solid #ded8d8;
+    border-radius: 24px;
+    background-color: transparent;
+    color: aquamarine;
+}
+header .left-section .search-form button {
+    padding: 5px 10px;
+    font-size: 16px;
+    background-color: #161617;
+    color: aquamarine;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+header .left-section .search-form button:hover {
+    background-color: rgb(70, 47, 121);
+}
+header .left-section ul,
+header .right-section ul {
+    display: flex;
+    list-style-type: none;
+}
+header .left-section ul li,
+header .right-section ul li {
+    margin-left: 0px;
+    cursor: pointer;
+}
+header .right-section, li {
+    display: flex;
+    color: aquamarine;
+}
+a {
+    color: rgb(15, 16, 15);
+    padding: 0px;
+}
+.list img {
+    height: 13vh;
+    width: 18vh;
+    justify-content: left;
+    box-shadow: 0 5px 10px rgba(204, 4, 4, 0.22);
+}
+.song {
+    padding: 10px 0px;
+    color: rgb(16, 16, 16);
+    margin: 1px 0px;
+}
+.name {
+    padding: 10px;
+}
+h2 {
+    padding-bottom: 20px;
+    color: rgb(10, 10, 10);
+}
+.logo img {
+    height: 30px;
+    width: 30px;
+    margin-right: 5px;
+    color: aquamarine;
+}
+.music-symbol {
+    font-size: 24px;
+    color: aquamarine;
+}
+.container {
+    display: flex;
+    height:10px;
+    
+}
+.list {
+    margin: 0px 13px;
+    padding-bottom: 125px;
+    width: 60%;
+    border: 2px solid black;
+    border-radius: 13px;
+    background-color: rgb(224, 214, 233);
+    margin-left: 432px;
+    position: fixed; /* Make the list container fixed */
+    top: 68px; /* Adjust according to the header height */
+    height: calc(78% - 80px); /* Adjust according to the header height */
+    overflow-y: auto; /* Allow scrolling for the song list */
+}
+.list1 {
+    display: flex;
+}
+.sidebar {
+    margin: 10px 3px;
+    width: 20%;
+    background-color: rgb(224, 214, 233);
+    border: 2px solid black;
+    border-radius: 13px;
+    box-shadow: 0 5px 10px rgba(204, 4, 4, 0.22);
+    position: fixed;
+    top: 68px;/* Adjust according to the header height */
+    height: calc(95% - 80px); /* Adjust according to the header height */
+    margin-left: 91px;
+}
+.sidebar-header {
+    padding: 20px 0;
+}
+.sidebar-header h2 {
+    margin: 0;
+    font-size: 1.5em;
+    color: aquamarine;
+}
+.sidebar-menu {
+    padding-top: 45px;
+    width: 82%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.menu-item {
+    width: 85%;
+    padding: 15px 15px;
+    text-decoration: none;
+    color: #0b0b0b;
+    font-size: 1.2em;
+    transition: background-color 0.3s ease;
+    text-align: center;
+}
+.menu-item:hover {
+    background-color: aquamarine;
+}
+.logo img {
+    height: 30px;
+    width: 30px;
+    margin-right: 5px;
+    color:aquamarine;
+    }
+
+    .music-symbol {
+    font-size: 24px;
+    color:aquamarine;
+    }
+    main {
+    position: relative;
+    padding: 50px 20px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+main article {
+    width: calc(100% / 3 - 5px);
+    border-radius: 3px;
+    overflow: hidden;
+    margin-bottom: 25px;
+    background: #f1f3f4;
+}
+
+main article img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+main article p,
+main article h4,
+main article audio {
+    padding: 0 5px;
+}
+
+main article audio {
+    width: 100%;
+}
+ .container{
+    display: flex;
+   
+ }
+ .list{
+         margin:10px 13px;
+         padding-bottom: 125px; 
+         width: 60%;
+         border:2px solid black;
+         border-radius: 13px;
+        background-color: rgb(224, 214, 233);
+        margin-left: 432px;
+    }
+   
+    .bckk img{
+        height:35px;
+        border-radius: 50%;
+        cursor: pointer;
+    }
+    .info-block {
+    display: none;
+
+    border: 1px solid;
+    padding: 10px;
+    position: absolute;
+    top: 50px; /* Adjust based on your navbar height */
+    right: 10px; /* Adjust based on your navbar width */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    background-image: url('./photo/1.avif');
+    border-radius: 2%;
+}
+
+.info-block p {
+    margin: 0;
+}
+.user-container{
+            text-align: center;
+            color:#f1f3f4
+        }
+        .user-container h2{
+            text-align: center;
+            color:#f1f3f4
+        }
+        #btn{
+            background-color: rgb(113, 119, 219);
+            color:white;
+            padding: 10px 10px;
+           cursor: pointer;
+           margin-top: 23px;
+        }
+</style>
+</head>
+<body>
+    <header class="hd">
+        <div class="logo">
+            <span class="music-symbol">&#9835;</span>
+            <img src="playlist-icon.png" alt="Playlist">
+        </div>
+        <div class="left-section">
+           
+        </div>
+        <div class="right-section left-section">
+            <!-- <form class="search-form" >
+                <input type="text" id="searchTerm" placeholder=" Search Song">
+                 <button type="submit" id="searchTermBtn">Search</button>
+            </form> -->
+            <div class="search-form">
+            <input type="text" id="searchTerm" placeholder=" Search Song">
+            <button id="searchTermBtn">Search</button>
+            </div>
+            <!-- <ul>
+                <a href="2.html" ><li>Sign in</li></a>
+                <a href="register.html" ><li>Sign up</li></a>
+            </ul> -->
+            <div class="bckk">
+            <img src="./photo/6.jpg" alt="alt" onclick="toggleInfoBlock()">
+              </div>
+        </div>
+         <!-- Info Block -->
+        <div id="info-block" class="info-block">
+             <div class="user-container" id="userct">
+                <h2>User Details</h2>
+                <div id="userDetails"></div>
+                <button id="btn">Log Out</button>
+        
+            </div>
+        </div>
+    </header>
+    <div class="container">
+    <div class="sidebar">
+        <div class="sidebar-menu">
+            <a href="playlist.html" class="menu-item">Home</a>
+            <a href="#search" class="menu-item">Search</a>
+            <a href="#playlist" class="menu-item">Playlist</a>
+        </div>
+    </div>
+    <div class="list">
+        <main id="songs"></main>
+        <h2>Popular Song</h2>
+        <div class="list1"> 
+        <div class ="song" >
+        <div>
+         <a href="index.html" ><img src="./photo/1.jpg" alt=""></a>
+        </div>
+        <div class="name">
+         <h3 >In the Name of Love</h3>
+         <p id="text">Song by Bebe Rexha and Martin Garrix</p>
+        </div>
+       </div>
+       <div class ="song">
+        <div>
+            <a href="index.html" ><img src="./photo/2.jpg" alt=""></a>
+        </div>
+        <div class="name">
+            <h3 >In the Name of Love</h3>
+        <p id="text">Song by Bebe Rexha and Martin Garrix</p>
+        </div>
+       </div>
+       <div class ="song">
+        <div>
+            <a href="index.html" > <img src="./photo/3.jpg" alt=""></a>
+        </div>
+        <div class="name">
+            <h3>In the Name of Love</h3>
+        <p id="text">Song by Bebe Rexha and Martin Garrix</p>
+        </div>
+       </div>
+       <div class ="song">
+        <div>
+            <a href="index.html" ><img src="./photo/1.jpg" alt=""></a>
+        </div>
+        <div class="name">
+            <h3 >In the Name of Love</h3>
+        <p id="text">Song by Bebe Rexha and Martin Garrix</p>
+        </div>
+        
+       </div>
+        </div>
+    </div>
+</div>
+<footer class="ft">
+
+</footer>
+    <script src="javascc.js">
+    </script>
+</body>
+</html>

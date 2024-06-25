@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/e74fb72b70.js" crossorigin="anonymous"></script>
+    <link rel=”stylesheet” href=”https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css”rel=”nofollow” 
+    integrity=”sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I” crossorigin=”anonymous”>
+  
+</head>
+<body>
+    <div class="container">
+       <div class="music">
+         <nav>
+            <div class="cycle" >
+            <a href="playlist.html" ><i class="fa-solid fa-angle-left cycle"></i></a>
+            </div>
+            <div class="cycle">
+            <i class="fa-solid fa-bars"></i>
+            </div>
+
+         </nav>
+         <img src="./photo/3.jpg"   class="song" id="img">
+         <h1 id="name">In the Name of Love</h1>
+         <p id="text">Song by Bebe Rexha and Martin Garrix</p>
+       <audio id="song">
+           <source src="./photo/msc.mp3" type="audio/mpeg " id="new">
+       </audio>
+       <input type="range" value="0" id="prog">
+       <div class="control">
+         <div onclick="leftt()"><i class="fa-solid fa-backward" id="left"></i></div>
+         <div onclick="playPause()"><i class="fa-solid fa-play" id="cnt"></i></div>
+         <div onclick="right()"><i class="fa-solid fa-forward"></i></div>
+       </div>
+    </div>
+    </div>
+    
+    <script src="javasc.js"></script>
+</body>
+</html>
